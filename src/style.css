@@ -103,3 +103,25 @@ button{
     max-width: 100%;
     max-height: 300px;
 }
+
+.input--meme---subcontainer{
+    flex-direction: column;
+    margin-top: -30px;
+}
+
+.input--image---text{
+    margin: 0;
+    position: relative;
+    font-family: 'Impact', 'sans-serif';
+    font-size: calc(2rem + 2px);
+    color: #FFFFFF;
+    -webkit-text-stroke-width: 2px; /* largura da borda */
+    -webkit-text-stroke-color: #000; /* cor da borda */}
+
+.top-input{
+    top: 90px;
+}
+
+.bottom-input{
+    bottom: 50px;
+}
