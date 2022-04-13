@@ -18,31 +18,21 @@ export default function Inputs(){
     })
 
     // Altera o state que contém o texto de cima do meme
-    function changesTopText(){
+    function changeText(event){
         setMemeText(prevText => {
             return {
                 ...prevText,
-                topText: document.getElementById("input1").value
+                [event.target.name]:event.target.value
             }
         })
     }
-
-    // Altera o state que contém o texto de baixo do meme
-    function changesBottomText(){
-        setMemeText(prevText => {
-            return {
-                ...prevText,
-                bottomText: document.getElementById("input2").value
-            }
-        })
-    }
-
+console.log(memeText)
     // Retorna o meu componente completo
     return (
         <section className="flex inputs--container">
             <div className="flex inputs--input---subcontainer">
-                <input onKeyUp={changesTopText}  placeholder="Top text" id="input1"type="text"/>
-                <input onKeyUp={changesBottomText} placeholder="Bottom text" id="input2" type="text"/>
+                    <input onKeyUp={changeText} name="topText" placeholder="Top text" id="input1"type="text"/>
+                    <input onKeyUp={changeText} name="bottomText" placeholder="Bottom text" id="input2" type="text"/>
             </div>
             <button onClick={changeMeme} >Get a new meme image  🖼</button>
             <div className="flex input--meme---subcontainer">
