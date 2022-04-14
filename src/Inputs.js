@@ -19,10 +19,12 @@ export default function Inputs(){
 
     // Altera o state que contém o texto de cima do meme
     function changeText(event){
+
+        const {name,value} = event.target;
         setMemeText(prevText => {
             return {
                 ...prevText,
-                [event.target.name]:event.target.value
+                [name]:value
             }
         })
     }
